@@ -7,39 +7,65 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
+ @import '../variables.scss';
+
 .root {
   margin: 0;
 }
 
+
 .link {
   display: inline-block;
-  padding: 3px 8px;
   text-decoration: none;
-  font-size: 1.125em; /* ~18px */
-}
-
-.link,
-.link:active,
-.link:visited {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.link:hover {
-  color: rgba(255, 255, 255, 1);
-}
-
-.highlight {
-  margin-right: 8px;
-  margin-left: 8px;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.15);
+  font-size: 11px; /* ~18px */
   color: #fff;
-}
+  position: relative;
+  padding: 85px 0 11px;
+  margin: 0 25px;
+  width: 120px;
+  text-transform: uppercase;
 
-.highlight:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
+  &:hover,
+  &:active
+  &.active {
+    border-bottom: 5px solid $orange;
+    display: inline-block;
+    color: $orange;
+    
+    &:before {
+      background-color: $orange;
+    }
+  }
 
-.spacer {
-  color: rgba(255, 255, 255, 0.3);
+  &:before {
+    background-image: url(./icons.png);
+    background-color: #3A5AA9;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 69px;
+    height: 69px;
+    content: '';
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+
+  &.deuda {
+    &:before {
+      background-position: 17px 16px;
+    }
+  }
+
+  &.equity {
+    &:before {
+      background-position: -60px 16px;
+    }
+  }
+
+  &.financieros {
+    &:before {
+      background-position: -225px 16px;
+    }
+  }
 }

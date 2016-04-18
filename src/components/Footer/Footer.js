@@ -16,13 +16,15 @@ function Footer() {
   return (
     <div className={s.root}>
       <div className={s.container}>
-        <span className={s.text}>© Your Company</span>
-        <span className={s.spacer}>·</span>
-        <Link className={s.link} to="/">Home</Link>
-        <span className={s.spacer}>·</span>
-        <Link className={s.link} to="/privacy">Privacy</Link>
-        <span className={s.spacer}>·</span>
-        <Link className={s.link} to="/not-found">Not Found</Link>
+        <div>
+          <a href="http://mellow.cc">
+            <img src={require('./afico.png')} />
+          </a>
+          <a href="http://mellow.cc">
+            <img src={require('./kumo.png')} />
+          </a>
+          <p>© iVenture 2016 /  Todos los derechos reservados  / <a href="mailto:info@iventu.re">info@iventu.re</a></p>
+        </div>
       </div>
     </div>
   );

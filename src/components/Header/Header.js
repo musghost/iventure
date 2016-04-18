@@ -11,21 +11,21 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Header.scss';
 import Link from '../Link';
+import Socialnetwork from '../Socialnetwork';
 import Navigation from '../Navigation';
 
 function Header() {
   return (
     <div className={s.root}>
       <div className={s.container}>
-        <Navigation className={s.nav} />
-        <Link className={s.brand} to="/">
-          <img src={require('./logo-small.png')} width="38" height="38" alt="React" />
-          <span className={s.brandTxt}>Your Company</span>
-        </Link>
-        <div className={s.banner}>
-          <h1 className={s.bannerTitle}>React</h1>
-          <p className={s.bannerDesc}>Complex web apps made easy</p>
+        <Socialnetwork />
+        <img src={require('./iVenture.png')} width="171" height="32" alt="iVenture" />
+
+        <div className={s.comparative}>
+          <h1>Compara inversiones<br />Selecciona tu mejor opción</h1>
+          <p><span className={s.orange}>Aqui un texto que explique la plataforma</span> que reúne a inversionistas ángeles, fondos de inversión y fondos gubernamentales con los mejores proyectos de alto impacto en México.</p>
         </div>
+        <Navigation />
       </div>
     </div>
   );

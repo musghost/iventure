@@ -18,18 +18,37 @@ function Home({ news }, context) {
   return (
     <div className={s.root}>
       <div className={s.container}>
-        <h1 className={s.title}>React.js News</h1>
-        <ul className={s.news}>
-          {news.map((item, index) => (
-            <li key={index} className={s.newsItem}>
-              <a href={item.link} className={s.newsTitle}>{item.title}</a>
-              <span
-                className={s.newsDesc}
-                dangerouslySetInnerHTML={{ __html: item.contentSnippet }}
-              />
-            </li>
-          ))}
-        </ul>
+        <h1 className={s.title}><img src={require('./header.png')} />Deuda</h1>
+        <table className={s.table}>
+          <thead>
+            <tr>
+              <th></th>
+              <th><span>Tasa mínima</span></th>
+              <th><span>Tasa máxima</span></th>
+              <th><span>Monto mínimo de inversión</span></th>
+              <th><span>Monto máximo de inversión</span></th>
+              <th><span>Link</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Content</td>
+              <td><span className={s.btnOrange}>13.26%</span></td>
+              <td><span className={s.btnBlue}>13.26%</span></td>
+              <td>$250 MXN</td>
+              <td>$50 M MXN</td>
+              <td><a className={s.link} href="http://mellow.online" target="_blank"></a></td>
+            </tr>
+            <tr>
+              <td>Content</td>
+              <td><span className={s.btnOrange}>13.26%</span></td>
+              <td><span className={s.btnBlue}>13.26%</span></td>
+              <td>$250 MXN</td>
+              <td>$50 M MXN</td>
+              <td><a className={s.link} href="http://mellow.online" target="_blank"></a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
